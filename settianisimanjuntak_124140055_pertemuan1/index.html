@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini POS Kantin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Kasir Kantin</h1><p>Catat belanja, hitung diskon, dan kembalian.</p></header>
+  <main>
+    <section class="panel">
+      <h2>Tambah barang</h2>
+      <form id="formBarang" novalidate>
+        <label for="nama">Nama barang</label>
+        <input id="nama" type="text" placeholder="Contoh: Air Mineral">
+        <small class="error" id="errNama"></small>
+
+        <label for="harga">Harga satuan (Rp)</label>
+        <input id="harga" type="number" placeholder="Minimal 500">
+        <small class="error" id="errHarga"></small>
+
+        <label for="qty">Jumlah</label>
+        <input id="qty" type="number" placeholder="Minimal 1">
+        <small class="error" id="errQty"></small>
+
+        <button type="submit">Tambah ke keranjang</button>
+      </form>
+    </section>
+
+    <section class="panel wide">
+      <h2>Keranjang belanja</h2>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>No</th><th>Nama Barang</th><th>Harga Satuan</th><th>Qty</th><th>Subtotal</th><th>Aksi</th></tr></thead>
+          <tbody id="isiKeranjang"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Pembayaran</h2>
+      <dl>
+        <dt>Total belanja</dt><dd id="total">Rp 0</dd>
+        <dt>Diskon 10% (min. Rp 50.000)</dt><dd id="diskon">Rp 0</dd>
+        <dt class="grand">Total akhir</dt><dd class="grand" id="totalAkhir">Rp 0</dd>
+      </dl>
+      <label for="bayar">Uang bayar (Rp)</label>
+      <input id="bayar" type="number" placeholder="Nominal uang diterima">
+      <p id="kembalian" class="info" aria-live="polite">Kembalian: Rp 0</p>
+      <button type="button" id="btnReset" class="secondary">Transaksi baru</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

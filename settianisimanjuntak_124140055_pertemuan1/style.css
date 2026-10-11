@@ -1,0 +1,34 @@
+:root{--bg:#eef2f1;--card:#fff;--ink:#17302c;--muted:#5d726e;--main:#0f6b5c;--main-dark:#0a4d42;--line:#d5dfdd;--danger:#c62828}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.5}
+header{background:var(--main-dark);color:#fff;padding:24px 20px}
+header h1{margin:0;font-size:1.8rem}
+header p{margin:4px 0 0;opacity:.85}
+main{max-width:1100px;margin:20px auto;padding:0 16px;display:grid;grid-template-columns:1fr 1.6fr;gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px}
+.panel h2{margin:0 0 12px;font-size:1.1rem}
+.wide{grid-row:span 2}
+label{display:block;margin-top:10px;font-weight:600;font-size:.9rem}
+input{width:100%;padding:9px 10px;margin-top:4px;border:1px solid var(--line);border-radius:6px;font-size:1rem}
+input:focus-visible,button:focus-visible{outline:3px solid #7fd1c1;outline-offset:1px}
+input.invalid{border-color:var(--danger)}
+.error{display:block;min-height:1.1em;color:var(--danger);font-size:.82rem}
+button{margin-top:14px;width:100%;padding:10px;border:0;border-radius:6px;background:var(--main);color:#fff;font-size:1rem;font-weight:600;cursor:pointer}
+button:hover{background:var(--main-dark)}
+button.secondary{background:#fff;color:var(--main-dark);border:1px solid var(--main)}
+button.secondary:hover{background:#e3f1ee}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left;font-size:.92rem}
+th{background:#e3f1ee}
+td.num{text-align:right}
+td.kosong{text-align:center;color:var(--muted);padding:24px}
+.hapus{margin:0;width:auto;padding:5px 10px;background:var(--danger);font-size:.82rem}
+.hapus:hover{background:#8e1b1b}
+dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:0}
+dt,dd{margin:0}
+dd{text-align:right;font-variant-numeric:tabular-nums}
+.grand{font-weight:700;font-size:1.1rem;border-top:1px solid var(--line);padding-top:6px}
+.info{margin:12px 0 0;padding:10px;border-radius:6px;background:#e3f1ee;font-weight:600}
+.info.kurang{background:#fde8e8;color:var(--danger)}
+@media(max-width:760px){main{grid-template-columns:1fr}.wide{grid-row:auto}}
