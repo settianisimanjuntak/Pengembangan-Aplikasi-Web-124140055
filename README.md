@@ -1,0 +1,1 @@
+# Settiani-Simanjuntak_124140055_Pertemuan1
